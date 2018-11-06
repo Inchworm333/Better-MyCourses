@@ -6,3 +6,7 @@
 /.idea/httpRequests/
 rest-client.private.env.json
 http-client.private.env.json
+
+# Node Modules
+/node_modules/
+package-lock.json
