@@ -1,0 +1,307 @@
+/* Generic Page */
+.d2l-navigation-s-header,
+.d2l-navigation-s-main.d2l-navigation-main-tb {
+	background-color: #212121;
+	border-bottom: 1px solid #424242;
+}
+
+.d2l-navigation-s-band-color {
+	background-color: #E65100 !important;
+}
+
+.d2l-tile {
+	background-color: #424242 !important;
+}
+
+/* Site Body */
+body {
+	background-color: #212121 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	background: #212121;
+	box-shadow: inset 0 0 3px black;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #424242;
+	border-radius: 10px;
+}
+
+/* Main Logo Brightness */
+img[alt="My Home"] {
+	filter: brightness(3);
+}
+
+/* Top Menu Name Colors */
+.d2l-navigation-s-button-highlight.d2l-dropdown-opener {
+	color: #9E9E9E;
+}
+
+/* Notification Circle */
+.x-scope.d2l-icon-0 circle[fill="#e57231"] {
+	stroke-width: 0;
+}
+
+/* Top Icons */
+d2l-icon[icon="d2l-tier2:divider-big"] {
+	/* menu dividers*/
+	color: #616161 !important;
+}
+
+d2l-icon[icon="d2l-tier3:classes"],
+d2l-icon[icon="d2l-tier3:email"],
+d2l-icon[icon="d2l-tier3:discussions"],
+d2l-icon[icon="d2l-tier3:notification-bell"],
+d2l-icon[icon="navigation-42:profile"] {
+	color: #9E9E9E;
+}
+
+/* Dropdown Content */
+.d2l-dropdown-content-width {
+	background-color: #424242 !important;
+	border-color: black !important;
+}
+
+/* Notification Badges */
+.d2l-minibar-activity-message-image {
+	filter: brightness(2);
+}
+
+.d2l-dropdown-content-pointer div:first-child {
+	background-color: #424242 !important;
+	border-color: black !important;
+	box-shadow: none !important;
+}
+
+.d2l-dropdown-content-pointer {
+	clip: rect(-10px, 21px, 8px, -8px) !important;
+	z-index: unset !important;
+}
+
+/* Dropdown Messages */
+#AB_DL_PH_Messages .d2l-datalist-container {
+	background-image: none !important;
+}
+
+/* Dropdown Profile Menu Separator */
+.d2l-minibar-menu-separator {
+	border-bottom: 1px dotted #d0d0d0 !important;
+}
+
+/* Text Color */
+.d2l-typography,
+.d2l-heading {
+	color: #EEEEEE !important;
+}
+
+.d2l-textblock-secondary,
+.course-code-text,
+.d2l-navigation-s-link,
+p,
+.d2l-htmlblock {
+	color: #E0E0E0 !important;
+}
+
+.d2l-textblock {
+	color: #BDBDBD !important;
+}
+
+[style="font-size: 12pt; color: #633d28;"] {
+	color: #795548 !important;
+}
+
+/* Links */
+.d2l-link-elem:link,
+.d2l-link:link {
+	color: #448AFF !important;
+}
+
+.d2l-link-elem:visited,
+.d2l-link:visited {
+	color: #7C4DFF !important;
+}
+
+/* Hilight Background Color */
+.vui-active {
+	background-color: #616161 !important;
+}
+
+/* Loading Icon Spinner */
+.d2l-loading-spinner circle[stroke-width="0.5"] {
+	/*Border Color*/
+	stroke: black !important;
+	background-color: black;
+}
+
+.d2l-loading-spinner circle[fill="#FFF"] {
+	fill: #616161;
+}
+
+.d2l-loading-spinner-0 .d2l-loading-spinner-wrapper svg[class*="slice"] g path:first-child + path,
+.d2l-loading-spinner-1 .d2l-loading-spinner-wrapper svg[class*="slice"] g path:first-child + path,
+.d2l-loading-spinner-2 .d2l-loading-spinner-wrapper svg[class*="slice"] g path:first-child + path {
+	fill: #9E9E9E !important;
+	border: none;
+	stroke: #9E9E9E;
+	stroke-width: 0.5;
+}
+
+.d2l-loading-spinner-0 .d2l-loading-spinner-wrapper svg[class*="slice"] g path:first-child,
+.d2l-loading-spinner-1 .d2l-loading-spinner-wrapper svg[class*="slice"] g path:first-child,
+.d2l-loading-spinner-2 .d2l-loading-spinner-wrapper svg[class*="slice"] g path:first-child {
+	fill: #616161;
+}
+
+.d2l-loading-spinner-0 .d2l-loading-spinner-bg.d2l-loading-spinner,
+.d2l-loading-spinner-1 .d2l-loading-spinner-bg.d2l-loading-spinner,
+.d2l-loading-spinner-2 .d2l-loading-spinner-bg.d2l-loading-spinner {
+	stroke: #D84315;
+}
+
+/* Sidebar Calender Dropdown */
+.d2l-widget {
+	border-color: #616161 !important;
+}
+
+.d2l-collapsepane-header {
+	background-color: #616161 !important;
+	background-image: none !important;
+	color: whitesmoke;
+	border: 1px solid black !important;
+}
+
+[icon="d2l-tier1:arrow-expand"],
+[icon="d2l-tier1:arrow-collapse"] {
+	color: #757575 !important;
+}
+
+.d2l-collapsepane-content {
+	background-color: #616161 !important;
+	border-right: 1px solid black !important;
+	border-left: 1px solid black !important;
+	border-bottom: 1px solid black !important;
+}
+
+.d2l-textblock {
+	color: #EEEEEE;
+}
+
+/* Various Context Menus */
+.d2l-contextmenu {
+	background-color: #424242;
+	border-color: black !important;
+}
+
+/* color of horozontal ruler */
+hr {
+	border-color: #424242 !important;
+	background-color: #424242 !important;
+	color: #424242 !important;
+}
+
+/* Delete Abnoxious Gradient Shadow */
+.d2l-navigation-s-shadow-gradient {
+	display: none;
+}
+
+/* HOME */
+
+/*Delete the user links box and the 'find my courses' box*/
+div[aria-labelledby*=d2l_1_0_],
+div[aria-labelledby*=d2l_1_7_] {
+	display: none;
+}
+
+/* For the All-Courses popup */
+#all-courses,
+#all-courses .scrollable {
+	background: #212121;
+	border-top-color: black;
+}
+
+/* Alerts */
+.d2l-alert-0 {
+	background: #212121;
+}
+
+.alert-wrapper .d2l-alert {
+	background-color: #424242;
+	border-color: black !important;
+	border-width: 3px;
+}
+
+.alert-wrapper .d2l-alert {
+	border-bottom-right-radius: 5px !important;
+	border-top-right-radius: 5px !important;
+}
+
+.alert-wrapper .d2l-alert .message-highlight.d2l-alert {
+	background-color: #E53935;
+	border-color: inherit !important;
+	border-radius: 3px 0 0 3px !important;
+}
+
+/*Course Box*/
+.d2l-course-image-tile {
+	border-width: 1px;
+	border-color: black !important;
+}
+
+.d2l-course-image-tile #dropdown-more {
+	visibility: hidden;
+}
+
+.d2l-course-image-tile-0 .image-container.d2l-course-image-tile {
+	background: black;
+}
+
+.d2l-image-tile-0 .d2l-image-tile-image-container.d2l-image-tile {
+	background: black;
+	border-color: black;
+}
+
+d2l-image-tile-container style-scope d2l-image-tile:first-child {
+	background-color: black !important;
+}
+
+d2l-course-image-tile .d2l-image-tile-menu-adjacent-container.d2l-image-tile {
+	/* Course Box Pinned/Unpinned invisible*/
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+d2l-course-image-tile:hover .d2l-image-tile-menu-adjacent-container.d2l-image-tile {
+	/* Course Box Pinned/Unpinned visible*/
+	opacity: 1;
+}
+
+.update-text-box {
+	/*Update Notification*/
+	margin-right: 10px !important;
+	margin-top: 10px !important;
+	border-color: #e87511 !important;
+}
+
+.flex {
+	background-color: #616161;
+	overflow: hidden;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.course-text {
+	padding-left: 10px;
+	padding-bottom: 10px;
+	color: #EEEEEE;
+}
+
+.course-code-text,
+.semester-text,
+.d2l-icon-2 {
+	color: #BDBDBD !important;
+}
+

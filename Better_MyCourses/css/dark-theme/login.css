@@ -1,0 +1,42 @@
+/* LOGIN */
+
+/*fix col width so non rit login fits*/
+.col-md-1 {
+	width: 0 !important;
+}
+
+/*rounded corners for most things */
+#login-container,
+.col-md-5.splash-inset,
+.support {
+	border-radius: 15px;
+}
+
+/* Change color for support boxes and images inside */
+.support {
+	background-color: #424242 !important;
+	color: white;
+}
+
+.support:hover {
+	background-color: #E87420 !important;
+}
+
+.col-md-3 .support img {
+	filter: contrast(5);
+}
+
+/*Get rid of 'review info for browser' and fix spacing*/
+.col-md-8 .login-list {
+	display: none;
+}
+
+.col-md-8 .row {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+/*Delete scrollbar*/
+html {
+	overflow: hidden;
+}
