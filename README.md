@@ -7,4 +7,3 @@ A tool for improving your RIT MyCourses experience.
 - [ ] Dark Theme
 - [ ] Dropdown Calender
 - [ ] Custom Course Images
-- [ ] pls work 
