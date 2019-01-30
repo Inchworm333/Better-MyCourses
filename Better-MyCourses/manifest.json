@@ -1,18 +1,22 @@
 {
-	//Better MyCourses
 	"manifest_version": 2,
-	"name": "Better MyCourses",
+	"name": "Better myCourses",
 	"version": "0.0.1",
-	"description": "A tool for improving your RIT MyCourses experience.",
+	"description": "A tool for improving your RIT myCourses experience.",
 	"icons": {
 		"16": "icon16.png",
 		"48": "icon48.png",
 		"128": "icon128.png"
 	},
+	"options_page": "../html/options.html",
 	"permissions": [
-		"tabs",
-		"activeTab",
+		"storage",
 		"https://mycourses.rit.edu/*"
+	],
+	"optional_permissions": [
+		"cookies",
+		"https://shibboleth.main.ad.rit.edu/*",
+		"https://*.duosecurity.com/*"
 	],
 	"content_scripts": [
 		{
@@ -29,6 +33,14 @@
 			],
 			"css": [
 				"css/dark-theme/login.css"
+			]
+		},
+		{
+			"matches": [
+				"https://shibboleth.main.ad.rit.edu/*"
+			],
+			"js": [
+				"js/no-login.js"
 			]
 		}
 	],

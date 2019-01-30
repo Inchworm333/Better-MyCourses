@@ -1,8 +1,17 @@
 /* LOGIN */
 
-/*fix col width so non rit login fits*/
+/*fix col width so external login fits*/
 .col-md-1 {
 	width: 0 !important;
+}
+
+#metaritlogo {
+	left: 6px !important;
+	top: 0;
+	width: 375px !important;
+	height: 51px !important;
+	background: url(https://www.rit.edu/marketing/brandportal/downloads/logos/hor/1-line/white/new_RIT_full_hor_w.png) no-repeat !important;
+	background-size: 375px auto !important;
 }
 
 /*rounded corners for most things */

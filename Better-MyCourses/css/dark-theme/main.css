@@ -1,7 +1,7 @@
 /* Generic Page */
-.d2l-navigation-s-header,
-.d2l-navigation-s-main.d2l-navigation-main-tb {
-	background-color: #212121;
+d2l-navigation-main-header,
+d2l-navigation-main-footer{
+	background-color: #212121 !important;
 	border-bottom: 1px solid #424242;
 }
 
@@ -42,8 +42,8 @@ img[alt="My Home"] {
 }
 
 /* Notification Circle */
-.x-scope.d2l-icon-0 circle[fill="#e57231"] {
-	stroke-width: 0;
+.d2l-navigation-button-notification-icon {
+	border-color: #e87511 !important;
 }
 
 /* Top Icons */
@@ -58,6 +58,28 @@ d2l-icon[icon="d2l-tier3:discussions"],
 d2l-icon[icon="d2l-tier3:notification-bell"],
 d2l-icon[icon="navigation-42:profile"] {
 	color: #9E9E9E;
+}
+
+/* Highlight Color */
+.d2l-navigation-s-highlight-bar{
+	background-color: #2196F3 !important;
+}
+
+.d2l-navigation-s-button-highlight:hover d2l-icon {
+	color: #2196F3 !important;
+}
+
+.d2l-navigation-s-button-highlight[data-active] .d2l-navigation-s-highlight-bar {
+	background-color: #64B5F6 !important;
+}
+
+.d2l-navigation-s-button-highlight[data-active] d2l-icon {
+	color: #64B5F6 !important;
+}
+
+/* Remove Obnoxious gradient */
+.d2l-navigation-shadow-gradient {
+	display: none;
 }
 
 /* Dropdown Content */
@@ -87,9 +109,33 @@ d2l-icon[icon="navigation-42:profile"] {
 	background-image: none !important;
 }
 
+.vui-list > .vui-selected {
+	background-color: #616161 !important;
+}
+
 /* Dropdown Profile Menu Separator */
 .d2l-minibar-menu-separator {
 	border-bottom: 1px dotted #d0d0d0 !important;
+}
+
+/* Search Bar */
+.vui-input, .vui-input:hover {
+	background-color: #616161 !important;
+	color: whitesmoke !important;
+	border: none !important;
+	padding: 0.4rem 2.1rem 0.4rem 0.75rem !important;
+}
+
+.vui-input::placeholder {
+	color: whitesmoke !important;
+}
+
+.vui-input-search-button, .vui-input-search-clear-button{
+	filter: brightness(2) !important;
+}
+
+.d2l-tabs-container {
+	max-width: inherit !important;
 }
 
 /* Text Color */
@@ -125,7 +171,7 @@ p,
 	color: #7C4DFF !important;
 }
 
-/* Hilight Background Color */
+/* Highlight Background Color */
 .vui-active {
 	background-color: #616161 !important;
 }
@@ -196,14 +242,14 @@ p,
 	border-color: black !important;
 }
 
-/* color of horozontal ruler */
+/* color of horizontal ruler */
 hr {
 	border-color: #424242 !important;
 	background-color: #424242 !important;
 	color: #424242 !important;
 }
 
-/* Delete Abnoxious Gradient Shadow */
+/* Delete obnoxious Gradient Shadow */
 .d2l-navigation-s-shadow-gradient {
 	display: none;
 }
@@ -245,14 +291,19 @@ div[aria-labelledby*=d2l_1_7_] {
 	border-radius: 3px 0 0 3px !important;
 }
 
-/*Course Box*/
-.d2l-course-image-tile {
+/* Course Box */
+d2l-card {
 	border-width: 1px;
 	border-color: black !important;
 }
 
-.d2l-course-image-tile #dropdown-more {
+/* .d2l-course-image-tile #dropdown-more {
 	visibility: hidden;
+} */
+
+/* Re-Enable Change Image Option */
+.d2l-course-image-tile d2l-menu d2l-menu-item:first-of-type {
+	display: flex !important;
 }
 
 .d2l-course-image-tile-0 .image-container.d2l-course-image-tile {
@@ -269,18 +320,18 @@ d2l-image-tile-container style-scope d2l-image-tile:first-child {
 }
 
 d2l-course-image-tile .d2l-image-tile-menu-adjacent-container.d2l-image-tile {
-	/* Course Box Pinned/Unpinned invisible*/
+	/* Course Box Pinned/Unpinned invisible */
 	opacity: 0;
 	transition: opacity .5s;
 }
 
 d2l-course-image-tile:hover .d2l-image-tile-menu-adjacent-container.d2l-image-tile {
-	/* Course Box Pinned/Unpinned visible*/
+	/* Course Box Pinned/Unpinned visible */
 	opacity: 1;
 }
 
 .update-text-box {
-	/*Update Notification*/
+	/* Update Notification */
 	margin-right: 10px !important;
 	margin-top: 10px !important;
 	border-color: #e87511 !important;
