@@ -61,11 +61,11 @@ d2l-icon[icon="navigation-42:profile"] {
 }
 
 /* Highlight Color */
-.d2l-navigation-s-highlight-bar{
+.d2l-navigation-button:hover .d2l-navigation-button-top-border {
 	background-color: #2196F3 !important;
 }
 
-.d2l-navigation-s-button-highlight:hover d2l-icon {
+.d2l-navigation-button-icon .d2l-navigation-button:hover {
 	color: #2196F3 !important;
 }
 

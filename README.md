@@ -7,3 +7,10 @@ A tool for improving your RIT MyCourses experience.
 - [ ] Dark Theme
 - [ ] Dropdown Calender
 - [ ] Custom Course Images
+- [ ] Skip Sign-in
+  - [ ] Skip 2 Factor Authentication
+  - [ ] Skip Login Entierly
+- [ ] Memes
+  - [ ] Sign-in Hard Mode
+    - [ ] Sign-in Captia
+	- [ ] Auto sign out on page close
