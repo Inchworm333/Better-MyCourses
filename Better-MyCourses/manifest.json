@@ -15,8 +15,7 @@
 	],
 	"optional_permissions": [
 		"cookies",
-		"https://shibboleth.main.ad.rit.edu/*",
-		"https://*.duosecurity.com/*"
+	  "https://shibboleth.main.ad.rit.edu/*"
 	],
 	"content_scripts": [
 		{
@@ -33,14 +32,6 @@
 			],
 			"css": [
 				"css/dark-theme/login.css"
-			]
-		},
-		{
-			"matches": [
-				"https://shibboleth.main.ad.rit.edu/*"
-			],
-			"js": [
-				"js/no-login.js"
 			]
 		}
 	],
