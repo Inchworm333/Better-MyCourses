@@ -1,35 +1,46 @@
-/* Generic Page */
-d2l-navigation-main-header,
-d2l-navigation-main-footer{
-	background-color: #212121 !important;
-	border-bottom: 1px solid #424242;
+/********** Definition for variables **********/
+:root {
+	--Background: #212121;
+	--Background2: #424242;
+	--Accent: #E65100;
 }
 
+/********** Generic Page **********/
+/* Headers on top of page */
+d2l-navigation-main-header,
+d2l-navigation-main-footer{
+	background-color: var(--Background) !important;
+	border-bottom: 1px solid var(--Background2);
+}
+
+/* Color bar on top of page */
 .d2l-navigation-s-band-color {
-	background-color: #E65100 !important;
+	background-color: var(--Accent) !important;
 }
 
 .d2l-tile {
-	background-color: #424242 !important;
+	background-color: var(--Background2) !important;
 }
 
 /* Site Body */
 body {
-	background-color: #212121 !important;
+	background-color: var(--Background) !important;
 }
 
-/* Scrollbar */
+/*** Scrollbar ***/
 ::-webkit-scrollbar {
 	width: 10px;
-	background: #212121;
+	background: var(--Background);
 	box-shadow: inset 0 0 3px black;
 	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #424242;
+	background-color: var(--Background2);
 	border-radius: 10px;
 }
+
+/***/
 
 /* Main Logo Brightness */
 img[alt="My Home"] {
@@ -43,12 +54,12 @@ img[alt="My Home"] {
 
 /* Notification Circle */
 .d2l-navigation-button-notification-icon {
-	border-color: #e87511 !important;
+	border-color: var(--Accent) !important;
 }
 
-/* Top Icons */
+/********** Top Icons **********/
+/* menu dividers*/
 d2l-icon[icon="d2l-tier2:divider-big"] {
-	/* menu dividers*/
 	color: #616161 !important;
 }
 
@@ -79,12 +90,12 @@ d2l-icon[icon="navigation-42:profile"] {
 
 /* Remove Obnoxious gradient */
 .d2l-navigation-shadow-gradient {
-	display: none;
+	display: none !important;
 }
 
 /* Dropdown Content */
 .d2l-dropdown-content-width {
-	background-color: #424242 !important;
+	background-color: var(--Background2) !important;
 	border-color: black !important;
 }
 
@@ -94,7 +105,7 @@ d2l-icon[icon="navigation-42:profile"] {
 }
 
 .d2l-dropdown-content-pointer div:first-child {
-	background-color: #424242 !important;
+	background-color: var(--Background2) !important;
 	border-color: black !important;
 	box-shadow: none !important;
 }
@@ -238,20 +249,21 @@ p,
 
 /* Various Context Menus */
 .d2l-contextmenu {
-	background-color: #424242;
+	background-color: var(--Background2);
 	border-color: black !important;
 }
 
 /* color of horizontal ruler */
 hr {
-	border-color: #424242 !important;
-	background-color: #424242 !important;
-	color: #424242 !important;
+	border-color: var(--Background2) !important;
+	background-color: var(--Background2) !important;
+	color: var(--Background2) !important;
 }
 
-/* Delete obnoxious Gradient Shadow */
-.d2l-navigation-s-shadow-gradient {
-	display: none;
+/* Replace obnoxious Gradient Shadow */
+.d2l-twopanelselector-side.d2l-twopanelselector-side-sep,
+.d2l-twopanelselector-side-bg.d2l-twopanelselector-side-sep {
+	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) !important;
 }
 
 /* HOME */

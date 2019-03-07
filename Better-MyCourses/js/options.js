@@ -21,30 +21,35 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
-	// Use default value color = 'red' and likesColor = true.
-	chrome.storage.sync.get({
-		signin_skip: false,
-	}, function (items) {
-		(document.getElementById('signin_skip').innerHTML).checked = items.signin_skip;
+	chrome.storage.sync.get(['signin_skip'], function (items) {
+		(document.getElementById('signin_skip')).checked = items.signin_skip;
 	});
 }
 
 
 function request_optional(option, permissions) {
-	// chrome.permissions.contains({permissions: ['cookies']}, function(result){
-	// 	if (!result) {
-	// 		permissions.permissions.push('cookies');
-	// 	}
-	// });
-	console.log(permissions);
 	chrome.permissions.request(permissions,
 		function (granted) {
 			let status = document.getElementById('status');
 			if (granted) {
-				option.checked = true;
-				//todo run script for option
-				status.style.color = 'green';
-				status.textContent = 'Option enabled!';
+				// Option for skipping RIT sign-in
+				if (option.id === 'signin_skip') {
+					chrome.runtime.sendMessage({
+						command: 'start_no-login',
+						permissions: permissions
+					}, function (response) {
+						if (response.success === true) {
+							option.checked = true;
+							status.style.color = 'green';
+							status.textContent = 'Option enabled!';
+						} else {
+							status.style.color = 'red';
+							status.textContent = 'Error encountered, check console for details.';
+							option.checked = false;
+							console.error('Error encountered while enabling option: ' + response.failText)
+						}
+					});
+				}
 			} else {
 				status.style.color = 'red';
 				status.textContent = 'You need to accept the permission in order to enable this option!';
@@ -94,6 +99,7 @@ function permission_selector(option) {
 	}
 }
 
+restore_options();
 document.getElementById('status').style.whiteSpace = 'pre';
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
@@ -102,5 +108,13 @@ document.getElementById('signin_skip').addEventListener('click', function () {
 document.getElementById('options').addEventListener('click', function () {
 	chrome.permissions.getAll(function (permissions) {
 		console.log(permissions);
+	})
+});
+document.getElementById('getcookies').addEventListener('click', function () {
+	chrome.runtime.sendMessage({
+		command: 'start_no-login',
+		permissions: {origins: ['https://shibboleth.main.ad.rit.edu/*'], permissions: ['cookies']}
+	}, function (response) {
+		console.log(response);
 	})
 });
