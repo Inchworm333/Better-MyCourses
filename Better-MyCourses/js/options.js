@@ -3,11 +3,11 @@
 
 
 function save_options() {
-	let signin_skip = document.getElementById('signin_skip');
+	let auto_duo = document.getElementById('auto_duo');
 	chrome.storage.sync.set({
-		signin_skip: signin_skip
+		auto_duo: auto_duo
 	}, function () {
-		var status = document.getElementById('status');
+		let status = document.getElementById('status');
 		status.style.color = 'green';
 		status.textContent = 'Options Saved!';
 		setTimeout(function () {
@@ -21,8 +21,8 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
-	chrome.storage.sync.get(['signin_skip'], function (items) {
-		(document.getElementById('signin_skip')).checked = items.signin_skip;
+	chrome.storage.sync.get(['auto_duo'], function (items) {
+		(document.getElementById('auto_duo')).checked = items.auto_duo;
 	});
 }
 
@@ -32,10 +32,10 @@ function request_optional(option, permissions) {
 		function (granted) {
 			let status = document.getElementById('status');
 			if (granted) {
-				// Option for skipping RIT sign-in
-				if (option.id === 'signin_skip') {
+				// Option for automatically filling in Duo
+				if (option.id === 'auto_duo') {
 					chrome.runtime.sendMessage({
-						command: 'start_no-login',
+						command: 'start_auto_duo',
 						permissions: permissions
 					}, function (response) {
 						if (response.success === true) {
@@ -64,10 +64,6 @@ function request_optional(option, permissions) {
 
 
 function remove_optional(permissions) {
-	// chrome.permissions.contains({origins: ['https://shibboleth.main.ad.rit.edu/*']},
-	// 	function(result) {
-	// 	if(!result) { permissions.permissions.push('cookies');}
-	// 	});
 	chrome.permissions.remove(permissions, function (removed) {
 		let status = document.getElementById('status');
 		if (removed) {
@@ -86,9 +82,9 @@ function remove_optional(permissions) {
 
 
 function permission_selector(option) {
-	var origin;
-	if(option === 'signin_skip') {
-		origin = {origins: ['https://shibboleth.main.ad.rit.edu/*'], permissions: ['cookies']}
+	let origin;
+	if (option === 'auto_duo') {
+		origin = {origins: ['*.duosecurity.com']}
 	}
 	option = document.getElementById(option);
 
@@ -103,18 +99,11 @@ restore_options();
 document.getElementById('status').style.whiteSpace = 'pre';
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
-document.getElementById('signin_skip').addEventListener('click', function () {
-	permission_selector('signin_skip'); });
+document.getElementById('auto_duo').addEventListener('click', function () {
+	permission_selector('auto_Duo');
+});
 document.getElementById('options').addEventListener('click', function () {
 	chrome.permissions.getAll(function (permissions) {
 		console.log(permissions);
-	})
-});
-document.getElementById('getcookies').addEventListener('click', function () {
-	chrome.runtime.sendMessage({
-		command: 'start_no-login',
-		permissions: {origins: ['https://shibboleth.main.ad.rit.edu/*'], permissions: ['cookies']}
-	}, function (response) {
-		console.log(response);
 	})
 });

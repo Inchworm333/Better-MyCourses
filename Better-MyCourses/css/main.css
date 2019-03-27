@@ -89,7 +89,7 @@ d2l-icon[icon="navigation-42:profile"] {
 }
 
 /* Remove Obnoxious gradient */
-.d2l-navigation-shadow-gradient {
+d2l-navigation::shadow .d2l-navigation-shadow-gradient {
 	display: none !important;
 }
 

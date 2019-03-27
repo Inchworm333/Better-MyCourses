@@ -1,28 +1,5 @@
 # Default ignored files
-/.idea/shelf/
-/.idea/workspace.xml
 /.idea/
 
-# Editor-based HTTP Client requests
-/.idea/httpRequests/
-rest-client.private.env.json
-http-client.private.env.json
-
-# Node Modules
-/node_modules/
-package-lock.json
-
 # Collected Information
-/Sequel_Sans/
-BrightspaceLE-AdminGuide.doc
-D2L Main.css
-gradient.PNG
-Logo-myCourses.png
-Sequel Sans Heavy Head.otf
-Sequel_Sans.rar
-/D2L.LP.Web.Desktop.default.css
-D2L.LP.Web.Desktop.Print.default.css
-D2L.LP.Web.Desktop.default.css
-D2L.PlatformTools.Homepage.default.css
-/D2L.LP.Web.Desktop.Print.default.css
-/D2L.PlatformTools.Homepage.default.css
+/Research/
