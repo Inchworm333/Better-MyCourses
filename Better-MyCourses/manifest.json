@@ -35,12 +35,19 @@
 			"css": [
 				"css/login.css"
 			]
+		},
+		{
+			"matches": [
+				"https://api-3d4a13e1.duosecurity.com/*"
+			],
+			"js": [
+				"js/automatic_duo.js"
+			]
 		}
 	],
 	"background": {
 		"scripts": [
-			"js/background.js",
-			"js/automatic_duo.js"
+			"js/background.js"
 		],
 		"persistent": false
 	},
