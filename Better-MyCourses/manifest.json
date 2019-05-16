@@ -4,9 +4,9 @@
 	"version": "0.0.1",
 	"description": "A tool for improving your RIT myCourses experience.",
 	"icons": {
-		"16": "icon16.png",
-		"48": "icon48.png",
-		"128": "icon128.png"
+		"16": "./img/icon/icon16.png",
+		"48": "./img/icon/icon48.png",
+		"128": "./img/icon/icon128.png"
 	},
 	"options_page": "../html/options.html",
 	"permissions": [

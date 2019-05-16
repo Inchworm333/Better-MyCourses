@@ -4,14 +4,7 @@
 let duo_url = 'https://start.rit.edu/Shibboleth.sso/Login?authnContextClassRef=' +
 	'http://rit.edu/ac/classes/mfa&target=https://start.rit.edu/Duo/createOfflineCodes';
 
-let codes = {'data': [], 'number': 0};
-
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-	if (message.command === 'start_no-login') {
-		main();
-	}
-});
-
+let codes = {'codeList': []};
 
 /*
 Clicks cancel button for push, clicks remember me for 24 hours and inputs passcode
@@ -37,16 +30,11 @@ function login_overlay() {
 Collects passcodes from create offline codes link (@duo_url)
 */
 function collect_passcodes() {
-	codes.number = codes.data.length;
-	let table_elements = Array.from(document.getElementsByClassName('offlineCodeTable')[0]
-		.getElementsByTagName('td')); //get offline code table
-	for (let i = 0; i < table_elements.length; i++) { //to remove useless checkbox
-		let code = table_elements[i].innerText.replace('☐ ', '');
-		code.replace('Use this code to generate new codes: ', '');
-		codes.data.push(code);
-	}
-	let last_code = codes.data.pop();
-	codes.data.push(last_code.replace(/\D/g, '')); //to remove 'Use this code to generate new codes: '
+	let elements = [];
+	document.querySelectorAll('.offlineCodeTable td').forEach(function (element) {
+		elements.push(element.innerText.match(/\d+/g)[0]);
+	});//Gets all of the passcodes and puts them into the elements array
+	codes.codeList = elements;
 	chrome.storage.local.set({Codes: codes}, function () {
 		console.log("Added codes: " + codes.toLocaleString())
 	})
@@ -81,7 +69,7 @@ function check_passcode(exists) {
 
 
 function main() {
-	if (document.URL === 'https://api-*.duosecurity.com/*') {
-		login();
+	if () {
+
 	}
 }
