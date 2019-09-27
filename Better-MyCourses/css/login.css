@@ -10,7 +10,8 @@
 	top: 0;
 	width: 375px !important;
 	height: 51px !important;
-	background: url(https://www.rit.edu/marketing/brandportal/downloads/logos/hor/1-line/white/new_RIT_full_hor_w.png) no-repeat !important;
+	margin: 12px 0 0 5px !important;
+	background: url(https://www.rit.edu/marketing/brandportal/images/1505/toolkits/logo/RIT_RGB_hor_full_w.png) no-repeat !important;
 	background-size: 375px auto !important;
 }
 
@@ -19,6 +20,11 @@
 .col-md-5.splash-inset,
 .support {
 	border-radius: 15px;
+}
+
+/* Replace crusty login image*/
+.col-md-5.splash-inset .img-responsive {
+	content: url("../img/Login-logo.svg");
 }
 
 /* Change color for support boxes and images inside */

@@ -1,6 +1,7 @@
 //Options Page for Better myCourses
 //by Nicholas Valletta
 
+//TODO: refactor due to new implementation method.
 
 function save_options() {
 	let auto_duo = document.getElementById('auto_duo');

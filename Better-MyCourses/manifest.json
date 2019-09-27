@@ -12,13 +12,10 @@
 	"permissions": [
 		"storage",
 		"https://mycourses.rit.edu/*",
-		"declarativeContent",
-		"webNavigation"
+		"webNavigation",
+		"tabs"
 	],
-	"optional_permissions": [
-		"cookies",
-		"https://shibboleth.main.ad.rit.edu/*"
-	],
+	"short_name": "B-myCourses",
 	"content_scripts": [
 		{
 			"matches": [
@@ -42,7 +39,9 @@
 			],
 			"js": [
 				"js/automatic_duo.js"
-			]
+			],
+			"all_frames": true,
+			"run_at": "document_idle"
 		}
 	],
 	"background": {
