@@ -21,6 +21,10 @@
 			"matches": [
 				"https://mycourses.rit.edu/*"
 			],
+			"js": [
+				"js/css-change.js"
+			],
+			"run_at": "document_end",
 			"css": [
 				"css/main.css"
 			]
