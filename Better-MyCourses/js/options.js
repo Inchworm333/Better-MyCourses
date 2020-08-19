@@ -2,6 +2,8 @@
 //by Nicholas Valletta
 
 //TODO: refactor due to new implementation method.
+//TODO: option to store keys through sync or local.
+
 
 function save_options() {
 	let auto_duo = document.getElementById('auto_duo');

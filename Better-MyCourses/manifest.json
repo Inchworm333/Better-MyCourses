@@ -12,6 +12,8 @@
 	"permissions": [
 		"storage",
 		"https://mycourses.rit.edu/*",
+		"https://start.rit.edu/*",
+		"https://shibboleth.main.ad.rit.edu/*",
 		"webNavigation",
 		"tabs"
 	],
@@ -46,11 +48,27 @@
 			],
 			"all_frames": true,
 			"run_at": "document_idle"
+		},
+		{
+			"matches": [
+				"https://mycourses.rit.edu/d2l/home"
+			],
+			"js": [
+				"js/duo_after.js"
+			]
+		},
+		{
+			"matches": [
+				"https://start.rit.edu/Duo/*/createOfflineCodes.view"
+			],
+			"js": [
+				"js/passcode_duo.js"
+			]
 		}
 	],
 	"background": {
 		"scripts": [
-			"js/background.js"
+			"js/duo_background.js"
 		],
 		"persistent": false
 	},
