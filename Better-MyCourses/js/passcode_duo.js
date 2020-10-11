@@ -1,4 +1,4 @@
-collect_passcodes()
+collect_passcodes();
 
 function collect_passcodes() {
 	let passcodes = [];
@@ -14,5 +14,5 @@ function collect_passcodes() {
 		passcodes: passcodes,
 		exp: expiration
 	})
-	chrome.windows.remove(chrome.windows.WINDOW_ID_CURRENT);
+	window.close();
 }

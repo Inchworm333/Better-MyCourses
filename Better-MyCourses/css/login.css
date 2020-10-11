@@ -1,5 +1,20 @@
 /* LOGIN */
 
+body {
+	height: 100vh;
+}
+
+.container-fluid {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.container-fluid > div:nth-of-type(3) {
+	flex-grow: 1;
+	margin: 15px 0;
+}
+
 /*fix col width so external login fits*/
 .col-md-1 {
 	width: 0 !important;
@@ -31,9 +46,10 @@
 	display: none;
 }
 
-/* Change color for support boxes and images inside */
+/* Change color for support boxes */
 .support {
 	background-color: #424242 !important;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzRweCIgd2lkdGg9IjM0cHgiIHZlcnNpb249IjEuMSI+CiAgICA8cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iMjUiIHN0eWxlPSJmaWxsOiAjZjM2ZTIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIHRyYW5zbGF0ZSgtMjUsMjQpIi8+Cjwvc3ZnPg==") !important;
 	color: white;
 }
 
@@ -41,21 +57,7 @@
 	background-color: #E87420 !important;
 }
 
-.col-md-3 .support img {
-	filter: contrast(5);
-}
-
-/*Get rid of 'review info for browser' and fix spacing*/
-.col-md-8 .login-list {
-	display: none;
-}
-
 .col-md-8 .row {
-	padding-top: 20px;
-	padding-bottom: 10px;
-}
-
-/*Delete scrollbar*/
-html {
-	overflow: hidden;
+	margin: auto;
+	padding: 0;
 }

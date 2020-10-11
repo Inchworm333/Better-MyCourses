@@ -8,6 +8,7 @@ const duo_url = 'https://start.rit.edu/Shibboleth.sso/Login?authnContextClassRef
 	'http://rit.edu/ac/classes/mfa&target=https://start.rit.edu/Duo/createOfflineCodes';
 
 let needsNewCodes = false;
+let passcodeWindow;
 
 chrome.runtime.onMessage.addListener((message) => {
 	if (message.whatDo === "getPasscodes") {
@@ -20,13 +21,12 @@ chrome.runtime.onMessage.addListener((message) => {
 		console.log('page loaded');
 		if (needsNewCodes) {
 			passcode_page();
-			needsNewCodes = false;
 		}
 	}
 })
 
 function passcode_page() {
-	chrome.windows.create({url: duo_url, type: 'popup', state: 'minimized'});
+	chrome.windows.create({url: duo_url, type: 'popup', state: 'minimized', setSelfAsOpener: true});
 }
 
 function offline_page(callback) {

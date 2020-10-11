@@ -35,9 +35,13 @@
 			"matches": [
 				"https://mycourses.rit.edu/d2l/loginh/*"
 			],
+			"js": [
+				"js/login-page.js"
+			],
 			"css": [
 				"css/login.css"
-			]
+			],
+			"run_at": "document_end"
 		},
 		{
 			"matches": [
@@ -74,5 +78,11 @@
 	},
 	"browser_action": {
 		"default_popup": "html/popup.html"
-	}
+	},
+	"web_accessible_resources": [
+		"img/login-icons/IconFacultySupportIcon.svg",
+		"img/login-icons/IconHelpResources.svg",
+		"img/login-icons/IconOnCampusSupport.svg",
+		"img/login-icons/IconOnlineSupportIcon.svg"
+	]
 }
