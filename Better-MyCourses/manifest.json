@@ -8,7 +8,7 @@
 		"48": "./img/icon/icon48.png",
 		"128": "./img/icon/icon128.png"
 	},
-	"options_page": "../html/options.html",
+	"options_page": "backend/html/options.html",
 	"permissions": [
 		"storage",
 		"https://mycourses.rit.edu/*",
@@ -28,7 +28,8 @@
 			],
 			"run_at": "document_end",
 			"css": [
-				"css/main.css"
+				"css/main.css",
+				"css/test.css"
 			]
 		},
 		{
@@ -51,7 +52,7 @@
 				"js/automatic_duo.js"
 			],
 			"all_frames": true,
-			"run_at": "document_idle"
+			"run_at": "document_end"
 		},
 		{
 			"matches": [
@@ -77,7 +78,7 @@
 		"persistent": false
 	},
 	"browser_action": {
-		"default_popup": "html/popup.html"
+		"default_popup": "backend/html/popup.html"
 	},
 	"web_accessible_resources": [
 		"img/login-icons/IconFacultySupportIcon.svg",

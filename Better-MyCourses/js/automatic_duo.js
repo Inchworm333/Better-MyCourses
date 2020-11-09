@@ -1,14 +1,19 @@
-//Saves offline codes and auto fills them in when you are trying to login.
-//by Nicholas Valletta
+/**
+ * automatic_duo.js
+ *
+ * @file Auto fills in offline codes for the MyCourses Duo 2 factor authentication system.
+ * @author Nicholas Valletta (Inchworm333) <Inchworm333@gmail.com>
+ * @version 1.0.0
+ */
 
 login()
 
-/*
-* Clicks cancel button for push, clicks remember me for 24 hours and inputs passcode.
-*/
+/**
+ * Starts the duo login process by clicking the keep me logged in and getting the passcodes.
+ */
 function login() {
 	console.log('Starting login');
-	//login_overlay();
+	//login_overlay(); //TODO probably not needed due to how fast stuff happens. Might replace with notification instead
 	//document.querySelector("#login-form input[type=checkbox]").checked = true; //TODO turn on later
 	fetch_passcode((value) => {
 		if (value === false) {
@@ -30,7 +35,7 @@ function login() {
 function check_passcodes(callback) {
 	chrome.storage.local.get(['loginPasscodes', 'passcodeExp'], (object) => {
 		console.log('checking passcodes');
-		if (Object.keys(object).length === 0) {
+		if (object.loginPasscodes.length !== 9 || object.loginPasscodes.every(obj => obj.used)) {
 			return callback([false, 'No passcodes available.']);
 		} else if (object.loginPasscodes.length === 0) {
 			return callback([false, 'No passcodes remaining.']);
@@ -49,8 +54,8 @@ function check_passcodes(callback) {
 function fetch_passcode(callback) {
 	console.log('Fetching passcodes');
 	check_passcodes((object) => {
+		console.log(object);
 		const [success, message, forced] = object;
-		let passcode;
 
 		if (success) {
 			console.log('Passcode check successful.')
@@ -58,13 +63,14 @@ function fetch_passcode(callback) {
 				chrome.runtime.sendMessage({whatDo: 'getPasscodes'});
 			}
 			chrome.storage.local.get(['loginPasscodes', 'passcodeExp'], (object) => {
-				passcode = object.loginPasscodes.pop();
+				let usedIndex = object.loginPasscodes.findIndex(loginPasscode => !loginPasscode.used); //Gets first un-used passcode
+				object.loginPasscodes[usedIndex].used = true;
 				chrome.runtime.sendMessage({
-					whatDo: 'storePasscodes',
+					whatDo: 'updatePasscodes',
 					passcodes: object.loginPasscodes,
 					exp: object.passcodeExp
 				})
-				return callback(passcode);
+				return callback(object.loginPasscodes[usedIndex].code);
 			})
 		} else {
 			console.log('passcode check not successful.')
@@ -73,12 +79,15 @@ function fetch_passcode(callback) {
 	});
 }
 
+/**
+ * Selects the passcode option and then enters the offline passcode.
+ * @param {int} passcode - an offline code for Duo
+ */
 function input_login(passcode) {
 	console.log('logging in');
-	setTimeout(() => {
-		document.querySelector('#passcode').click();
-		let passInput = document.querySelector('.passcode-input-wrapper input.passcode-input');
-		passInput.value = passcode;
-		document.querySelector('#passcode').click();
-	}, 500)
+	document.querySelector('#passcode').click();
+	let passInput = document.querySelector('.passcode-input-wrapper input.passcode-input');
+	passInput.value = passcode;
+	document.querySelector('#passcode').click();
+
 }

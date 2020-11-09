@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    min-width: 300px;
+}
+
+.tab-bar {
+    border-bottom: 2px solid black;
+
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+    padding-inline-start: 0;
+
+    width: 100%;
+}
+
+.tab-bar > li:first-of-type {
+    margin-left: 5px;
+}
+
+.tab-bar > li {
+    border-bottom: 2px solid white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    margin: 0 5px -2px 0;
+}
+
+.tab-bar > li > a {
+    display: block;
+    margin: 5px;
+}

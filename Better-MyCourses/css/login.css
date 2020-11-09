@@ -48,9 +48,9 @@ body {
 
 /* Change color for support boxes */
 .support {
-	background-color: #424242 !important;
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzRweCIgd2lkdGg9IjM0cHgiIHZlcnNpb249IjEuMSI+CiAgICA8cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iMjUiIHN0eWxlPSJmaWxsOiAjZjM2ZTIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIHRyYW5zbGF0ZSgtMjUsMjQpIi8+Cjwvc3ZnPg==") !important;
-	color: white;
+    background-color: #424242 !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzRweCIgd2lkdGg9IjM0cHgiIHZlcnNpb249IjEuMSI+CiAgICA8cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iMjUiIHN0eWxlPSJmaWxsOiAjZTg3NDIwIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIHRyYW5zbGF0ZSgtMjUsMjQpIi8+Cjwvc3ZnPg==") !important;
+    color: white;
 }
 
 .support:hover {
