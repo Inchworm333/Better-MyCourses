@@ -1,10 +1,1 @@
-<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="72px"
-		height="72px"
-		viewBox="5 0 60 80">
-	<g fill="white">
-		<ellipse cx="35" cy="18" rx="10" ry="10"/>
-		<path d="M 10 20 L 10 34 L 5 34 A 1 1 0 0 0 5 40 L 10 40 L 10 55 L 35 70 L 60 55 L 60 40 L 65 40 A 1 1 0 0 0 65 34 L 60 34 L 60 20 L 35 35 L 10 20 z"/>
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="5 0 60 80"><g fill="#fff"><ellipse cx="35" cy="18" rx="10" ry="10"/><path d="M 10 20 L 10 34 L 5 34 A 1 1 0 0 0 5 40 L 10 40 L 10 55 L 35 70 L 60 55 L 60 40 L 65 40 A 1 1 0 0 0 65 34 L 60 34 L 60 20 L 35 35 L 10 20 z"/></g></svg>
