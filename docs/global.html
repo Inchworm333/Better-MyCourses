@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JSDoc: Global</title>
+
+	<script src="scripts/prettify/prettify.js"></script>
+	<script src="scripts/prettify/lang-css.js"></script>
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="styles/prettify-tomorrow.css" rel="stylesheet" type="text/css">
+	<link href="styles/jsdoc-default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="main">
+
+	<h1 class="page-title">Global</h1>
+
+
+	<section>
+
+		<header>
+
+			<h2></h2>
+
+
+		</header>
+
+		<article>
+			<div class="container-overview">
+
+
+				<dl class="details">
+
+
+				</dl>
+
+
+			</div>
+
+
+			<h3 class="subsection-title">Methods</h3>
+
+
+			<h4 class="name" id="input_login"><span class="type-signature"></span>input_login<span class="signature">(passcode)</span><span
+					class="type-signature"></span></h4>
+
+
+			<div class="description">
+				Selects the passcode option and then enters the offline passcode.
+			</div>
+
+
+			<h5>Parameters:</h5>
+
+
+			<table class="params">
+				<thead>
+				<tr>
+
+					<th>Name</th>
+
+
+					<th>Type</th>
+
+
+					<th class="last">Description</th>
+				</tr>
+				</thead>
+
+				<tbody>
+
+
+				<tr>
+
+					<td class="name"><code>passcode</code></td>
+
+
+					<td class="type">
+
+
+						<span class="param-type">int</span>
+
+
+					</td>
+
+
+					<td class="description last">an offline code for Duo</td>
+				</tr>
+
+
+				</tbody>
+			</table>
+
+
+			<dl class="details">
+
+
+				<dt class="tag-source">Source:</dt>
+				<dd class="tag-source">
+					<ul class="dummy">
+						<li>
+							<a href="automatic_duo.js.html">automatic_duo.js</a>, <a
+								href="automatic_duo.js.html#line86">line 86</a>
+						</li>
+					</ul>
+				</dd>
+
+
+			</dl>
+
+
+			<h4 class="name" id="login"><span class="type-signature"></span>login<span class="signature">()</span><span
+					class="type-signature"></span></h4>
+
+
+			<div class="description">
+				Starts the duo login process by clicking the keep me logged in and getting the passcodes.
+			</div>
+
+
+			<dl class="details">
+
+
+				<dt class="tag-source">Source:</dt>
+				<dd class="tag-source">
+					<ul class="dummy">
+						<li>
+							<a href="automatic_duo.js.html">automatic_duo.js</a>, <a
+								href="automatic_duo.js.html#line14">line 14</a>
+						</li>
+					</ul>
+				</dd>
+
+
+			</dl>
+
+
+			<h4 class="name" id="passcode_page"><span class="type-signature"></span>passcode_page<span
+					class="signature">()</span><span class="type-signature"></span></h4>
+
+
+			<div class="description">
+				Creates minimized window that creates new passcodes
+			</div>
+
+
+			<dl class="details">
+
+
+				<dt class="tag-source">Source:</dt>
+				<dd class="tag-source">
+					<ul class="dummy">
+						<li>
+							<a href="duo_background.js.html">duo_background.js</a>, <a
+								href="duo_background.js.html#line43">line 43</a>
+						</li>
+					</ul>
+				</dd>
+
+
+				<dt class="tag-see">See:</dt>
+				<dd class="tag-see">
+					<ul>
+						<li>duo_url</li>
+					</ul>
+				</dd>
+
+
+			</dl>
+
+
+			<h4 class="name" id="store_passcodes"><span class="type-signature"></span>store_passcodes<span
+					class="signature">(passcodes, expiration)</span><span class="type-signature"></span></h4>
+
+
+			<div class="description">
+				Stores the passcodes and passcode expiration date
+			</div>
+
+
+			<h5>Parameters:</h5>
+
+
+			<table class="params">
+				<thead>
+				<tr>
+
+					<th>Name</th>
+
+
+					<th>Type</th>
+
+
+					<th class="last">Description</th>
+				</tr>
+				</thead>
+
+				<tbody>
+
+
+				<tr>
+
+					<td class="name"><code>passcodes</code></td>
+
+
+					<td class="type">
+
+
+						<span class="param-type">Array.&lt;int></span>
+
+
+					</td>
+
+
+					<td class="description last">the list of passcodes</td>
+				</tr>
+
+
+				<tr>
+
+					<td class="name"><code>expiration</code></td>
+
+
+					<td class="type">
+
+
+						<span class="param-type">Date</span>
+
+
+					</td>
+
+
+					<td class="description last">the date the passcodes expire</td>
+				</tr>
+
+
+				</tbody>
+			</table>
+
+
+			<dl class="details">
+
+
+				<dt class="tag-source">Source:</dt>
+				<dd class="tag-source">
+					<ul class="dummy">
+						<li>
+							<a href="duo_background.js.html">duo_background.js</a>, <a
+								href="duo_background.js.html#line53">line 53</a>
+						</li>
+					</ul>
+				</dd>
+
+
+			</dl>
+
+
+			<h4 class="name" id="update_passcodes"><span class="type-signature"></span>update_passcodes<span
+					class="signature">(passcodes)</span><span class="type-signature"></span></h4>
+
+
+			<div class="description">
+				Updates the passcodes
+			</div>
+
+
+			<h5>Parameters:</h5>
+
+
+			<table class="params">
+				<thead>
+				<tr>
+
+					<th>Name</th>
+
+
+					<th>Type</th>
+
+
+					<th class="last">Description</th>
+				</tr>
+				</thead>
+
+				<tbody>
+
+
+				<tr>
+
+					<td class="name"><code>passcodes</code></td>
+
+
+					<td class="type">
+
+
+						<span class="param-type">Object</span>
+
+
+					</td>
+
+
+					<td class="description last"></td>
+				</tr>
+
+
+				</tbody>
+			</table>
+
+
+			<dl class="details">
+
+
+				<dt class="tag-source">Source:</dt>
+				<dd class="tag-source">
+					<ul class="dummy">
+						<li>
+							<a href="duo_background.js.html">duo_background.js</a>, <a
+								href="duo_background.js.html#line71">line 71</a>
+						</li>
+					</ul>
+				</dd>
+
+
+				<dt class="tag-see">See:</dt>
+				<dd class="tag-see">
+					<ul>
+						<li><a href="global.html#store_passcodes">store_passcodes</a></li>
+					</ul>
+				</dd>
+
+
+			</dl>
+
+
+		</article>
+
+	</section>
+
+
+</div>
+
+<nav>
+	<h2><a href="index.html">Home</a></h2>
+	<h3>Global</h3>
+	<ul>
+		<li><a href="global.html#input_login">input_login</a></li>
+		<li><a href="global.html#login">login</a></li>
+		<li><a href="global.html#passcode_page">passcode_page</a></li>
+		<li><a href="global.html#store_passcodes">store_passcodes</a></li>
+		<li><a href="global.html#update_passcodes">update_passcodes</a></li>
+	</ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+	Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sat Nov 14 2020 03:29:12
+	GMT-0500 (Eastern Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
