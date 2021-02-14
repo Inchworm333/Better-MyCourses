@@ -23,6 +23,9 @@
 			"matches": [
 				"https://mycourses.rit.edu/*"
 			],
+			"exclude_matches": [
+				"https://mycourses.rit.edu/d2l/login"
+			],
 			"js": [
 				"js/css-change.js"
 			],
@@ -34,7 +37,7 @@
 		},
 		{
 			"matches": [
-				"https://mycourses.rit.edu/d2l/loginh/*"
+				"https://mycourses.rit.edu/d2l/login/*"
 			],
 			"js": [
 				"js/login-page.js"
@@ -81,9 +84,6 @@
 		"default_popup": "backend/html/popup.html"
 	},
 	"web_accessible_resources": [
-		"img/login-icons/IconFacultySupportIcon.svg",
-		"img/login-icons/IconHelpResources.svg",
-		"img/login-icons/IconOnCampusSupport.svg",
-		"img/login-icons/IconOnlineSupportIcon.svg"
+		"img/login-icons/*"
 	]
 }

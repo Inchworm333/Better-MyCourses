@@ -5,10 +5,14 @@
 	--Accent: #E65100;
 }
 
+d2l-navigation-link-image {
+	filter: invert(100%);
+}
+
 /********** Generic Page **********/
 /* Headers on top of page */
 d2l-navigation-main-header,
-d2l-navigation-main-footer{
+d2l-navigation-main-footer {
 	background-color: var(--Background) !important;
 	border-bottom: 1px solid var(--Background2);
 }
@@ -18,12 +22,18 @@ d2l-navigation-main-footer{
 	background-color: var(--Accent) !important;
 }
 
+/* General Page Sections */
 .d2l-tile {
 	background-color: var(--Background2) !important;
 }
 
+.d2l-panel {
+	background-color: var(--Background2) !important;
+	border-color: black !important;
+}
+
 /* Site Body */
-body {
+body, .d2l-box, .d2l-page-bg, .d2l-column-side-bg {
 	background-color: var(--Background) !important;
 }
 
