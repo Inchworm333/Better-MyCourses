@@ -1,0 +1,20 @@
+html {
+    --d2l-table-body-background-color: #616161 !important;
+}
+
+tr th, tr td {
+    border-color: black !important;
+}
+
+d2l-table-wrapper[type="default"] .d2l-table > * > tr[header] > th {
+    --d2l-table-header-background-color: #424242 !important;
+    --d2l-table-header_-_color: #EEEEEE !important;
+}
+
+.daylight .d2l-grid[type=data] > :only-child > tr.d_ggl2 > td {
+    background-color: #424242 !important;
+}
+
+.daylight label .ds_i {
+    color: #EEEEEE !important;
+}

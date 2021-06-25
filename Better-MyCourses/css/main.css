@@ -27,7 +27,7 @@ d2l-navigation-main-footer {
 	background-color: var(--Background2) !important;
 }
 
-.d2l-panel {
+.d2l-panel, .d2l-rowshadeonhover-selected {
 	background-color: var(--Background2) !important;
 	border-color: black !important;
 }
@@ -161,7 +161,8 @@ d2l-navigation::shadow .d2l-navigation-shadow-gradient {
 
 /* Text Color */
 .d2l-typography,
-.d2l-heading {
+.d2l-heading,
+span, p {
 	color: #EEEEEE !important;
 }
 
@@ -234,11 +235,11 @@ p,
 	border-color: #616161 !important;
 }
 
-.d2l-collapsepane-header {
+.d2l-collapsepane-header, .d2l-le-disc-post {
 	background-color: #616161 !important;
 	background-image: none !important;
-	color: whitesmoke;
 	border: 1px solid black !important;
+	color: whitesmoke;
 }
 
 [icon="d2l-tier1:arrow-expand"],

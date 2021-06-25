@@ -15,7 +15,8 @@
 		"https://start.rit.edu/*",
 		"https://shibboleth.main.ad.rit.edu/*",
 		"webNavigation",
-		"tabs"
+		"tabs",
+		"cookies"
 	],
 	"short_name": "B-myCourses",
 	"content_scripts": [
@@ -33,7 +34,8 @@
 			"css": [
 				"css/main.css",
 				"css/test.css"
-			]
+			],
+			"all_frames": true
 		},
 		{
 			"matches": [
@@ -84,6 +86,7 @@
 		"default_popup": "backend/html/popup.html"
 	},
 	"web_accessible_resources": [
-		"img/login-icons/*"
+		"img/login-icons/*",
+		"css/frame.css"
 	]
 }
