@@ -289,8 +289,8 @@ hr {
 /* HOME */
 
 /*Delete the user links box and the 'find my courses' box*/
-div[aria-labelledby*=d2l_1_0_],
-div[aria-labelledby*=d2l_1_7_] {
+div[aria-labelledby*=d2l_1_2_],
+div[aria-labelledby*=d2l_1_4_] {
 	display: none;
 }
 
